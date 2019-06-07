@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adminaddproduct">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="277dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="40dp"
+        android:padding="10sp"
+        android:text="Add Products"
+
+        android:textAlignment="center"
+        android:textColor="@color/darkblue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <ImageView
+            android:id="@+id/watch"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/watch" />
+
+        <ImageView
+            android:id="@+id/laptop"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/laptops" />
+
+        <ImageView
+            android:id="@+id/tab"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/tab" />
+
+        <ImageView
+            android:id="@+id/mobile"
+            android:layout_width="95dp"
+            android:layout_height="135dp"
+            app:srcCompat="@drawable/mobile" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="184dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="286dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/tshirt"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/tsh" />
+
+        <ImageView
+            android:id="@+id/pant"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/pants" />
+
+        <ImageView
+            android:id="@+id/cap"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/caps" />
+
+        <ImageView
+            android:id="@+id/boot"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/boooots" />
+    </LinearLayout>
+    <Button
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="10sp"
+        android:id="@+id/check_orders2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/pink"
+        android:layout_margin="10sp"
+        android:text="Manage Products"
+        android:textAllCaps="false"
+        android:textColor="@color/darkblue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_orders"></Button>
+
+    <Button
+        android:id="@+id/check_orders"
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/pink"
+        android:text="Check New Orders "
+        android:textAllCaps="false"
+        android:textColor="@color/darkblue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"></Button>
+    <Button
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="10sp"
+        android:id="@+id/Adminlogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/pink"
+        android:layout_margin="10sp"
+        android:text="Admin Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/darkblue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_orders2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

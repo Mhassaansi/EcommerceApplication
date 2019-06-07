@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="15dp"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pink"
+    >
+    <TextView
+        android:id="@+id/Pcartname"
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textSize="20dp"
+        android:textColor="@color/darkblue"
+        android:textAlignment="viewStart"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:layout_marginLeft="5sp"
+        android:padding="3sp"/>
+    <TextView
+        android:id="@+id/Pcartquan"
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:text="Product Quantity"
+        android:textSize="20dp"
+        android:textColor="@color/darkblue"
+        android:textAlignment="viewEnd"
+        android:layout_marginRight="5sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="end"
+        android:textStyle="bold"
+        android:padding="3sp"/>
+    <TextView
+        android:layout_marginTop="10sp"
+        android:id="@+id/Pcartprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textSize="20dp"
+        android:textColor="@color/darkblue"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_below="@id/Pcartquan"
+        android:padding="3sp"
+
+        />
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
