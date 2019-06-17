@@ -52,10 +52,15 @@ private  RecyclerView.LayoutManager layoutManager;
 bnext.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        tv.setText("Total Price = "+String.valueOf(overtoatlprice)+ "$");
-        Intent it=new Intent(CartActivity.this,ConfirmFinalActivity.class);
-        it.putExtra("Total Price",String.valueOf(overtoatlprice));
-        startActivity(it);
+        if(overtoatlprice==0){
+           bnext.setVisibility(View.GONE);
+        }
+        else {
+            tv.setText("Total Price = " + String.valueOf(overtoatlprice) + "$");
+            Intent it = new Intent(CartActivity.this, ConfirmFinalActivity.class);
+            it.putExtra("Total Price", String.valueOf(overtoatlprice));
+            startActivity(it);
+        }
     }
 });
     }
@@ -184,41 +189,5 @@ adapter.startListening();
             }
         });
     }
-  /*  private void checkorderstate(){
-        DatabaseReference orderref;
-        orderref=FirebaseDatabase.getInstance().getReference().child("Orders")
-                .child(prevalet.Online_users.getPhone());
-        orderref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    String Shippingstate=dataSnapshot.child("state").getValue().toString();
-                    String Username=dataSnapshot.child("name").getValue().toString();
-                    if(Shippingstate.equals("Shipped")){
-                        tv.setText("Dear " + Username + " \n Your rder has been Shipped:");
-                        rcycle.setVisibility(View.GONE);
-                        tv1.setVisibility(View.VISIBLE);
-                        bnext.setVisibility(View.GONE);
-                        Toast.makeText(CartActivity.this,
-                                "You can Purshase more Products until Your frist order Has been recivied:", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(Shippingstate.equals("Not Shipped")){
-                        tv.setText("Shipping State = Not Shipped:");
-                        rcycle.setVisibility(View.GONE);
-                        tv1.setVisibility(View.VISIBLE);
-                        tv1.setText("Your Final order Has Been Palced Succesfully.Soon It will be on Your door step:");
-                        bnext.setVisibility(View.GONE);
-                        Toast.makeText(CartActivity.this,
-                                "You can Purshase more Products until Your frist order Has been recivied:", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-    }*/
 }
